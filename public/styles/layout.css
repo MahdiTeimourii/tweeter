@@ -15,11 +15,30 @@ html {
  */
 
 body {
+  
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #92b5dd; 
+  background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
   font-size: 24px;
+  
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+ /* Specify the Source Sans Pro font for everything in the body */
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  
+}
+
+/* Specify the Bungee font for the Twitter logo in the nav */
+.twitter-logo {
+  font-family: 'Bungee',sans-serif;
+}
+main {
+  width: 90%;
+  margin: 0 auto;
+  background-color: inherit;
+}
+

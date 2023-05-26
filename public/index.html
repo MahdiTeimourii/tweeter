@@ -5,25 +5,87 @@
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap" rel="stylesheet" rel="stylesheet" type="text/css" />
+    
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/headers.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#tweet-form').submit(function(event) {
+          // Prevent the default form submission behavior
+          event.preventDefault();
+
+          // Perform AJAX form submission
+          $.ajax({
+            url: '/tweets/', // Specify the correct endpoint/route
+            method: 'POST',
+            data: $(this).serialize(),
+            success: function(response) {
+              // Handle the successful response
+              console.log(response);
+            },
+            error: function(xhr, status, error) {
+              // Handle the error response
+              console.log(error);
+            }
+          });
+        });
+      });
+    </script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
+    <nav class="nav-Bar">
+       <div> 
+        <span class="logo">TWEETER</span> 
+      </div>
+      <footer>     
+        <button class='write'>
+          <span><b>Write</b> a new tweet</span>
+          <i class="fas fa-angle-double-down"></i>
+        </button>
+      </footer>
     </nav>
+    <nav>
+      
+    <header class="header">
+      <div class="avatar-name">
+        <div class="avatar">
+          <img src="/images/profile-hex.png"> 
+        </div>
+        <div class="name">
+          <h2><span>Mahdi</span> Teimouri</h2>
+        </div>
+      </div>
+    </header>
+  </nav>
 
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet">
+        
+        <form id="tweet-form" action="/tweets/" method="POST">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      <section class="tweet-container"></section>
+      <div class="scroll-to-top"></div>
+    </main>
   </body>
 </html>
