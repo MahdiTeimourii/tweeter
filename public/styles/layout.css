@@ -3,42 +3,30 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-html {
+
+ html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
+nav {
+  font-family: "Source Sans Pro";
+}
 
 body {
-  
   color: #545149;
-  background-color: #92b5dd; 
-  background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
+  background-color: #f4f1ec;
+  font-family: "Source Sans Pro", "sans-serif";
   font-size: 24px;
-  
+  margin-top: 120px;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
- /* Specify the Source Sans Pro font for everything in the body */
-body {
-  font-family: 'Source Sans Pro', sans-serif;
-  
+body::-webkit-scrollbar {
+  display: none;
 }
 
-/* Specify the Bungee font for the Twitter logo in the nav */
-.twitter-logo {
-  font-family: 'Bungee',sans-serif;
-}
-main {
-  width: 90%;
-  margin: 0 auto;
-  background-color: inherit;
-}
+
 

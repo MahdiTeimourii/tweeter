@@ -1,29 +1,42 @@
-/* nav.css */
 .nav-Bar {
-  background-color: #4056A1;
-  height: 120px;
+  background-color: #0d3acf;
+  height: 100px;
   width: 100%;
   color: #ffffff;
-  position: fixed;
-  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-
 .logo {
   font-family: "Bungee";
   color: #ffffff;
   font-size: larger;
-  margin: 1.5em;
-
-.nav-bar span {
-  font-family: 'Bungee', sans-serif; /* Set the font-family of <span> to Bungee */
+  margin: 1em;
 }
 
-
-
-
+.nav-Bar footer .write {
+  border: none;
+  background-color: #0d3acf;
+  color: #ffffff;
+  font-family: 'Sans-serif';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em;
+  font-size: 100%;
 }
 
+@media only screen and (min-width:1024px) {
+  .nav-Bar {
+    background-color: #0d3acf;
+    height: 120px;
+    width: 100%;
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

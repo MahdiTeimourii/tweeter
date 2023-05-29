@@ -1,0 +1,27 @@
+.header {
+  height: 500px;
+  background-color: #38d6f17c;
+  background-image: url("https://transparenttextures.com/patterns/45-degree-fabric-light.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  width: 100%
+}
+
+.header .name h2 {
+  color: rgb(255, 255, 255);
+  font-weight: 450;
+}
+
+.header .name h2 span {
+  font-weight: 700;
+}
+
+@media only screen and (min-width:1024px) {
+  .header {
+    margin-top: 1em;
+    margin-left: 2.5em;
+    width: 450px
+  }
+}
