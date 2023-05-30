@@ -9,7 +9,7 @@ const createTweetElement = (tweetObj) => {
   const { user, content, created_at } = tweetObj;
   const newTweet = `
     <article>
-      <header class="tweet-head">
+      <header class="tweet-header">
         <div>
           <img src="${user.avatars}" />
           <span>${user.name}</span>
@@ -26,7 +26,7 @@ const createTweetElement = (tweetObj) => {
           <span>${moment(created_at).fromNow()}</span>
         </div>
         <div class="tweet-reactions">
-          <span><i class="fas fa-flag"></i> <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></span>
+          <span><i class="fas fa-flag icon" ></i> <i class="fas fa-retweet icon"></i> <i class="fas fa-heart icon"></i></span>
         </div>
       </footer>
     </article>
@@ -104,6 +104,7 @@ $(document).ready(() => {
       resetErrorMessage('empty');
     } else {
       resetErrorMessage();
+      $('.counter').text("140")
       ajaxPost('/tweets', data, () => {
         // Fetch and render the last tweet
         $.get('/tweets', renderLastTweet);

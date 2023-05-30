@@ -1,25 +1,28 @@
+/* Styles for the tweet header */
 .tweet-header {
   font-size: 30px;
   margin: 1em;
 }
+
+/* Hover effect for the entire article */
 article:hover {
   box-shadow: 1px 5px;
-  color: #38d6f17c
-}
-article .tweet-header div span{
-  font-size: 25px;
-  font-weight: 300
-}
-article:hover {
-  box-shadow: 1px 5px;
-  color: #38d6f17c
+  color: #38d6f17c;
 }
 
+/* Styles for the tweet header text */
+article .tweet-header div span {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+/* Styles for the tweet content */
 article div {
   margin: 1em;
   font-size: 25px;
 }
 
+/* Styles for the tweet footer */
 .tweet-foot {
   padding: 10px;
   margin-top: 1em;
@@ -32,16 +35,24 @@ article div {
   font-weight: 600;
 }
 
+/* Styles for the text within the tweet footer */
 .tweet-foot div span {
   font-size: 25px;
 }
 
+/* Styles for the tweet reactions section within the footer */
 .tweet-reactions {
   display: flex;
   justify-content: space-around;
 }
 
-@media only screen and (min-width:1024px) {
+/* Hover effect for tweet reactions */
+.icon:hover {
+  color: rgb(247, 142, 56);
+}
+
+/* Media query for larger screens */
+@media only screen and (min-width: 1024px) {
   .container {
     width: 70%;
     padding: 0;
@@ -51,7 +62,7 @@ article div {
     border: solid;
   }
 
-  .tweet-container{
+  .tweet-container {
     width: 90%;
   }
 }
