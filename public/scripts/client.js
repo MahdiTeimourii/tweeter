@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Function to create a new tweet HTML element based on a tweet object
+
 const createTweetElement = (tweetObj) => {
   const { user, content, created_at } = tweetObj;
   const newTweet = `
@@ -62,10 +62,10 @@ const getText = (queryString) => {
 const resetErrorMessage = (violation) => {
   const $errorMessage = $('.error-message');
   if (violation === 'over count') {
-    $errorMessage.empty().append("<p>Your tweet is too long!</p>").slideDown("slow");
+    $errorMessage.empty().append("<p>Please limit Your tweet to 140 characters!</p>").slideDown("slow");
     $('textarea').focus();
   } else if (violation === 'empty') {
-    $errorMessage.empty().append("<p>Keep typing...</p>").slideDown("slow");
+    $errorMessage.empty().append("<p>Cmon...tell us something intreseting</p>").slideDown("slow");
     $('textarea').focus();
   } else {
     $errorMessage.hide().empty();
