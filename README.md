@@ -11,6 +11,9 @@ This repository is the starter code for the project: Students will fork and clon
 3. Install dependencies using the `npm install` command.
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
+![main](https://github.com/MahdiTeimourii/tweeter/assets/121985665/c4b3ac54-fee6-4757-9cdf-a5055374526b)
+![main2](https://github.com/MahdiTeimourii/tweeter/assets/121985665/39b7545e-4099-48e9-b9a0-ccc4e775f1c8)
+![main3](https://github.com/MahdiTeimourii/tweeter/assets/121985665/23c04953-84c2-4293-977f-5442e07466a3)
 
 ## Dependencies
 
