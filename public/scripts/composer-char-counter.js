@@ -12,10 +12,10 @@ $(document).ready(function () {
 
     // Check if the input length exceeds the character limit (140)
     if (inputLength > 140) {
-      // If the input is too long, add the 'invalid' class to the counter element
+      // If the input is too long, add the 'error' class to the counter element
       counter.addClass('error');
     } else {
-      // If the input is within the limit, remove the 'invalid' class from the counter element
+      // If the input is within the limit, remove the 'error' class from the counter element
       counter.removeClass('error');
     }
   });
