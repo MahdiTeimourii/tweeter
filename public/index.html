@@ -3,7 +3,7 @@
 
   <head>
     <title>Tweeter - Home Page</title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
@@ -17,9 +17,7 @@
     <script type="text/javascript" src=/scripts/composer-char-counter.js></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" ></script>
     <script src="https://kit.fontawesome.com/a4c9bc2fa3.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="/scripts/client.js"></script>  
 
   </head>
   <body>
@@ -54,7 +52,7 @@
           <textarea name="text" id="tweet-text"></textarea>
           <div class="display">
             <button type="submit">Tweet</button>
-            <output name="char-counter" class="char-counter" for="tweet-text">140</output>
+            <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
           </form>
       </section>
